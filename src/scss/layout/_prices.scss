@@ -1,0 +1,184 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.prices{
+    text-align: center;
+
+    h2 {
+        font-family: v.$raleway;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        color: v.$black;
+        margin-top: 55px;
+
+        @include m.desktop {
+            margin-top: 127px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .prices__container {
+        @include m.desktop {
+            display: flex;
+        }
+        
+        @include m.desktopXL {
+            padding: 0px 300px;
+        }
+
+        h4 {
+            font-family: v.$raleway;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 122.4%;
+            color: #13253B;
+        }
+    
+        p {
+            font-family: v.$open-sans;
+            font-weight: 300;
+            font-size: 46px;
+            line-height: 62px;
+        }
+    
+        span {
+            font-family: v.$raleway;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            color: #13253B;
+    
+        }
+    
+        button {
+            font-family: v.$open-sans;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            color: v.$white;
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+        }
+    
+        li {
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    
+        .prices__basic {
+            box-sizing: border-box;
+            width: 293px;
+            height: 251px;
+            border-radius: 18px;
+            margin: 17px auto 50px auto;
+            border: 1px solid v.$pink;
+
+            @include m.desktop {
+                width: 372px;
+                height: 461px;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+    
+            button {
+                background: v.$pink;
+                margin-top: 2px;
+
+                @include m.desktop {
+                    margin-top: 60px;
+                }
+            }
+    
+            p {
+                color: v.$pink;
+            }
+        }
+    
+        .prices__prof {
+            box-sizing: border-box;
+            width: 339px;
+            height: 277px;
+            border-radius: 18px;
+            margin: 0px auto 50px auto;  
+            border: 1px solid v.$blue;
+            box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+
+            @include m.desktop {
+                width: 405px;
+                height: 500px;
+            }
+    
+            button {
+                background: v.$blue;
+                margin-top: 25px;
+
+                @include m.desktop {
+                    margin-top: 80px;
+                }
+            }
+    
+            p {
+                color: v.$blue;
+            }
+        }
+    
+        .prices__premium {
+            box-sizing: border-box;
+            width: 293px;
+            height: 251px;
+            border-radius: 18px;
+            margin: 0px auto 80px auto;
+            border: 1px solid v.$green;
+
+            @include m.desktop {
+                width: 372px;
+                height: 461px;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+    
+            button {
+                background: v.$green;
+                margin-top: 5px;
+
+                @include m.desktop {
+                    margin-top: 40px;
+                }
+            }
+    
+            p {
+                color: v.$green;
+            }
+        }
+    
+        .prices__text {
+            display: inline-block;
+            margin-right: 40px;
+            margin-top: 70px;
+            vertical-align: top;
+
+            @include m.desktop {
+                display: block;
+                margin: 35px auto 60px auto;
+            }
+        }
+    
+        ul {
+            display: inline-block;
+            margin-top: 25px;
+
+            @include m.desktop {
+                display: block;
+            }
+    
+            li {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

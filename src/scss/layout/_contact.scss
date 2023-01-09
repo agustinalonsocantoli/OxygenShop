@@ -1,0 +1,135 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contact {
+    padding-left: 30px;
+    padding-right: 20px;
+
+    @include m.desktop {
+        display: flex;
+    }
+
+    h2 {
+        font-family: v.$raleway;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 47px;
+        color: v.$black;
+        margin-bottom: 5px;
+
+        @include m.desktop {
+            font-size: 49px;
+            line-height: 58px;
+        }
+    }
+
+    h4 {
+        font-family: v.$open-sans;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: v.$black;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-family: v.$open-sans;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: v.$grey;
+        margin-bottom: 18px;
+        margin-right: 23px;
+
+        @include m.desktop {
+            display: inline;
+        }
+        
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    label {
+        display: block;
+        margin: 45px auto 5px auto;
+        font-family: v.$open-sans;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 3.28px;
+        color: v.$blue;
+    }
+
+    .form__input {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #95989A;
+        padding: 10px 5px;
+
+        @include m.desktop {
+            width: 450px;
+        }
+    }
+
+    .form__tik {
+        display: inline;
+        margin-top: 35px;
+        margin-right: 5px;
+        vertical-align: top;
+        width: 20px;
+        height: 20px;
+    }
+
+    span {
+        font-family: v.$open-sans;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #707070;
+        display: inline-block; 
+        margin-top: 30px;
+        width: 90%;
+
+        @include m.desktop {
+            width: 405px;
+            height: 108px;
+        }
+    }
+
+    .btn--contenedor {
+        margin-top: 30px;
+        margin-bottom: 60px;
+        margin-right: 10px;
+        text-align: right;
+
+        input {
+            width: 226px;
+            height: 57px;
+            background: v.$btn;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            border-radius: 35px;
+            border: none;
+            font-family: v.$open-sans;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            color: v.$white;
+        }
+    }
+
+    .contact__info {
+        @include m.desktop {
+            margin:150px 55px 0px auto;
+        }
+    }
+
+    .form {
+        @include m.desktop {
+            margin:110px auto 0px 55px;
+        }
+    }
+
+    
+}

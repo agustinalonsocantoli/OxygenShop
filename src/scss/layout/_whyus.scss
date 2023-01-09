@@ -1,0 +1,142 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.whyus {
+
+    .whyus__init {
+        text-align: center;
+
+        h1 {
+            font-family: v.$raleway;
+            font-weight: 400;
+            font-size: 49px;
+            line-height: 57px;
+            color: v.$black;
+            margin-top: 100px;
+        }
+
+        p {
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            color: v.$black;
+            margin: 0 32px;
+            padding: 20px 30px;
+        }
+
+        button {
+            width: 310px;
+            height: 67px;
+            background: v.$btn;
+            box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+            border-radius: 40px;
+            border: none;
+            color: v.$white;
+            font-family: v.$open-sans;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 18px;
+            margin-bottom: 50px;
+
+            @include m.desktop {
+                margin-bottom: 0px;
+                width: 440px;
+            }
+        }
+    }
+
+    .whyus__img {
+        img{
+            width: 100%;
+            height: 100%;
+    
+            @include m.desktop {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .whyus__detail {
+        margin-top: 20px;
+        text-align: center;
+
+        h3 {
+            font-family: v.$raleway;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 35px;
+            color: v.$black;
+            margin: 0px auto 25px auto;
+            width: 70%;
+
+            @include m.desktop{
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                margin-bottom: 100px;
+            }
+        }
+
+        .items__text {
+            width: 30%;
+            margin: 0px auto 50px auto;
+            @include m.desktop {
+                width: 100%;
+            }
+
+            span {
+                font-family: v.$raleway;
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 5.96px;
+                color: v.$black;
+            }
+
+            p {
+                margin-top: 20px;
+                font-family: v.$raleway;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: v.$grey;
+            }
+        }
+
+        .item--1, .item--2, .item--3 {
+            width: 63px;
+            height: 63px;
+            margin: 15px auto;
+            border-radius: 100%;
+
+            svg {
+                position: absolute;
+            }
+        }
+
+        .item--1 {
+            background: v.$pink;
+        }
+
+        .item--2 {
+            background: v.$blue;
+        }
+
+        .item--3 {
+            background: v.$green;
+        }
+
+        .items {
+            @include m.desktop {
+                display: flex;
+                justify-content: space-around;
+                width: 70%;
+                margin: auto;
+            }
+        }
+    }
+}

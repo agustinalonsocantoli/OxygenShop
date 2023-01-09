@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+    background: v.$darkWhite;
+    box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+    height: 89px;
+
+    .footer__text {
+        display: inline-block;
+        margin: 22px 17px;
+
+        @include m.desktop {
+            margin: 20px 137px;
+        }
+
+        h2 {
+            font-family: v.$raleway;
+            font-weight: 300;
+            font-size: 26px;
+            line-height: 30px;
+            color: v.$blue;
+        }
+
+        p   {
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 15px;
+            color: v.$grey;
+        }
+    }
+
+    .footer__icon {
+        display: inline;
+        position: absolute;
+        margin-top: 33px;
+        right: 10px;
+
+        @include m.desktop {
+            margin: 35px 115px;
+        }
+        
+        svg {
+            margin-right: 20px;
+        }
+    }
+}

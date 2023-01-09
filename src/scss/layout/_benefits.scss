@@ -1,0 +1,247 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.benefits {
+    background: v.$darkWhite;
+    padding: 42px 40px;
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 105px 150px;
+        gap: 40px;
+    }
+
+    @include m.desktopXL {
+        padding: 105px 500px;
+    }
+
+    h3 {
+        font-family: v.$raleway;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        color: v.$black;
+        width: 80%;
+        margin: 26px 0px 20px 0px;
+
+        @include m.desktop {
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        @include m.desktopXL{
+            width: 300px;
+        }
+    }
+
+    p {
+        font-family: v.$open-sans;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: v.$black;
+        margin-bottom: 5px;
+
+        @include m.desktop {
+            font-size: 16px;
+            line-height: 22px;
+            padding-bottom: 70px;
+        }
+    }
+
+    .benefits__mac {
+        background: v.$white;
+        padding: 22px;
+        margin: 0px auto 24px auto;
+
+        @include m.desktop {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        p{
+            @include m.desktop{
+                border-bottom: 4px solid v.$pink;
+            }
+        }
+
+        img {
+            width: 192.76px;
+            height: 109.93px;
+
+            @include m.desktop {
+                width: 386.44px;
+                height: 219px;
+            }
+        }
+
+        .mac--container {
+
+            .mac--efect {
+                width: 90.12px;
+                height: 90.12px;
+                background: v.$pink;
+                border-radius: 41px;
+                margin-left: 161px;
+                margin-top: 20px;
+                position: absolute;
+                transform: rotate(-45deg);
+        
+                @include m.tablet{
+                    margin-left: 355px;
+                }
+        
+                @include m.desktop {
+                    width: 180px;
+                    height: 180px;
+                    margin-left: 420px;
+                    margin-top: 30px;
+                }
+            }
+            
+            img {
+                position: relative;
+                margin-top: 37px;
+                margin-left: 55px;
+    
+                @include m.tablet{
+                    margin-left: 250px;
+                }
+
+                @include m.desktop {
+                    margin-left: 200px;
+                    margin-right: 100px;
+                    margin-top: 70px;
+                }
+
+            }
+        }
+
+        .mac--text {
+            @include m.desktopXL{
+                width: 600px;
+            }
+        }
+    }
+    
+    .benefits__phone{
+        background: v.$white;
+        padding: 22px;
+        margin: 24px auto;
+
+        @include m.desktop {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            width: 100%;
+            margin: auto;
+            display: flex;
+        }
+
+        p{
+            @include m.desktop{
+                border-bottom: 4px solid v.$blue;
+            }
+        }
+
+        img {
+            width: 175px;
+            height: 134.99px;
+
+            @include m.desktop {
+                margin-left: 70px;
+                width: 426px;
+                height: 328px;
+            }
+        }
+
+        .phone--container {
+            width: 131px;
+            height: 131px;
+            background: v.$blue;
+            border-radius: 100%;
+            margin: auto;
+    
+            @include m.desktop {
+                margin-left: 70px;
+                width: 320px;
+                height: 320px;
+            }
+        }
+
+        .phone--text {
+            @include m.desktop {
+                width: 30%;
+                margin-right: 70px;
+            }
+        }
+    }
+    
+    .benefits__trumpet {
+        background: v.$white;
+        padding: 22px;
+        margin: 24px auto 0px auto;
+
+        @include m.desktop {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            width: 100%;
+            margin: 0px auto;
+            min-width: 623px;
+        }
+
+        @include m.desktopXL {
+            min-width: 1300px;
+        }
+
+        p{
+            @include m.desktop{
+                border-bottom: 4px solid v.$green;
+            }
+        }
+    }
+
+    .trumpet--container {
+        background: v.$green;
+        height: 195px;
+        margin: 0px auto;
+
+        img {
+            width: 295px;
+            height: 207px;
+            margin: 24px 30px 0px 0px;
+
+            @include m.tablet{
+                margin: 24px 30px 0px 255px;
+            }
+
+            @include m.desktop {
+                margin: 100px 98px;
+            }
+
+            @include m.desktopXL {
+                margin: 100px 220px;
+            }
+        }
+
+        @include m.desktop {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            width: 100%;
+            margin: 0px;
+            min-width: 440px;
+            min-height: 370px;
+        }
+
+        @include m.desktopXL {
+            min-width: 250px;
+        }
+    }
+}
