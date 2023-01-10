@@ -33,32 +33,32 @@ window.addEventListener('load', () => {
 
         percent.innerHTML = `${scrollPercent}%`;
 
-        if(scrollPercent > 25) {
-            popup.style.display = 'block';
-        }
+        // if(scrollPercent > 25) {
+        //     popup.style.display = 'block';
+        // }
     });
 
     //POPUP "SUBSCRIBE TO OUR NEWSLETTER"
-    let popup = document.querySelector('.popup');
-    let cerrarPopup = document.querySelector('.popup__icon');
+    // let popup = document.querySelector('.popup');
+    // let cerrarPopup = document.querySelector('.popup__icon');
 
-    setTimeout(function() {
-        popup.style.display = 'block';
-    }, 5000)
+    // setTimeout(function() {
+    //     popup.style.display = 'block';
+    // }, 5000)
 
-    document.querySelector('main').addEventListener('click', () => {
-        popup.style.display = 'none';
-    })
+    // document.querySelector('main').addEventListener('click', () => {
+    //     popup.style.display = 'none';
+    // })
 
-    cerrarPopup.addEventListener('click', () => {
-        popup.style.display = 'none';
-    })
+    // cerrarPopup.addEventListener('click', () => {
+    //     popup.style.display = 'none';
+    // })
 
-    document.addEventListener('keydown', function(event) {
-        if(event.key == 'Escape') {
-            popup.style.display = 'none';
-        }
-    });
+    // document.addEventListener('keydown', function(event) {
+    //     if(event.key == 'Escape') {
+    //         popup.style.display = 'none';
+    //     }
+    // });
 
     // BOTON RETURN TO THE TOP
     let returnTop = document.querySelector('.btn__return');

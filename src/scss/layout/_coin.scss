@@ -1,0 +1,80 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.coin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    height: 300px;
+    margin: 20px auto 40px auto;
+    border: 1px solid black;
+
+    .coin__select {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 400px;
+
+        select {
+            border-radius: 20px;
+            padding: 10px;
+            background: v.$green;
+            border: none;
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: v.$black;
+        }
+    }
+
+    .coin__input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        gap: 10px;
+
+        input {
+            width: 50%;
+            height: 30px;
+            padding: 5px;
+            border: none;
+            border-bottom: 2px solid v.$black;
+        }
+
+        label {
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            color: v.$black;
+        }
+    }
+
+    button {
+        width: 50%;
+        height: 50px;
+        background: v.$btn;
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        border-radius: 35px;
+        border: none;
+        font-family: v.$open-sans;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        color: v.$white;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red;
+        width: 50%;
+        height: 50px;
+    }
+}
