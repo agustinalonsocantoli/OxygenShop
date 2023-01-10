@@ -44,11 +44,23 @@
     </nav>
 
     <div class="popup">
+
+        <div class="popup__icon"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="30" height="30" viewBox="0 0 24 24" stroke-width="2.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </div>
+
         <h2>SUBSCRIBE</h2>
         <h4>TO OUR NEWSLETTER</h4>
-
-        <label></label>
-        <input type="email">
+        
+        <form class="form__popup" action="#">
+            <label>EMAIL</label>
+            <input class="popup__input" type="email">
+            <input class="popup__btn" type="submit" value="Send">
+        </form>
     </div>
 
     <main>
@@ -365,7 +377,7 @@
                 
     
                 <div class="form__contact">
-                    <form id="form">
+                    <form id="form" action="#">
                         <label for="name">NAME</label>
                         <input class="form__input" type="text" name="name" id="name">
                         <label for="email">EMAIL</label>
