@@ -39,12 +39,21 @@
             @include m.desktop {
                 display: flex;
             } 
+
+            @include m.phone {
+                margin-top: 35px;
+                margin-bottom: 20px;
+            }
         }
 
         li {
             @include m.desktop {
                 margin-right: 105px;
             } 
+
+            @include m.phone {
+                margin-bottom: 10px;
+            }
         }
 
         a {

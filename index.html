@@ -12,21 +12,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
 
+    <script type="text/javascript" src="/src/js/index.js"></script>
+
 </head>
 <body>
     <nav class="navegacion">
         <h2>OXYGEN Shop</h2>
 
-        <div class="navegacion__menu">
+        <div class="navegacion__menu desplegar">
             <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect y="10" width="20" height="2" fill="#07ACE6"/>
                 <rect y="5" width="20" height="2" fill="#07ACE6"/>
                 <rect width="20" height="2" fill="#07ACE6"/>
             </svg>
-                
         </div>
 
-        <div class="navegacion__lista">
+        <div class="navegacion__menu cerrar">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.49128 12.5013L12.4939 1.49872M12.4939 12.5013L1.49128 1.49872" stroke="#07ACE6" stroke-width="2"/>
+            </svg>    
+        </div>
+
+        <div class="navegacion__lista navegacion__mobile">
             <ul>
                 <li><a href="#">WHY US</a></li>
                 <li><a href="#benefits">BENEFITS</a></li>
@@ -35,6 +42,14 @@
             </ul>
         </div>
     </nav>
+
+    <div class="popup">
+        <h2>SUBSCRIBE</h2>
+        <h4>TO OUR NEWSLETTER</h4>
+
+        <label></label>
+        <input type="email">
+    </div>
 
     <main>
         <section class="whyus">
@@ -296,6 +311,35 @@
                     <button>Begin</button>
                 </div>
             </section>
+
+            <div id="slider">
+                <div class="slider__container">
+                    <img src="/src/img/img1.jpg" alt="Image1">
+                    <img src="/src/img/img2.jpg" alt="Image2">
+                    <img src="/src/img/img3.jpg" alt="Image3">
+                    <img src="/src/img/img4.jpg" alt="Image4">
+                    <img src="/src/img/img5.jpg" alt="Image5">
+                    <img src="/src/img/img6.jpg" alt="Image6">
+                    <img src="/src/img/img7.jpg" alt="Image7">
+                    <img src="/src/img/img8.jpg" alt="Image8">
+                </div>
+
+                <div class="slider__btn">
+                    <span class="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M20 15h-8v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h8a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1z" />
+                        </svg>
+                    </span>
+
+                    <span class="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 9h8v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1z" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
     
             <section class="contact" id="contact">
                 <div class="contact__info">
@@ -320,22 +364,28 @@
                 </div>
                 
     
-                <div class="form">
-                    <form>
-                        <label>NAME</label>
-                        <input class="form__input" type="text">
-                        <label>EMAIL</label>
-                        <input class="form__input" type="email">
+                <div class="form__contact">
+                    <form id="form">
+                        <label for="name">NAME</label>
+                        <input class="form__input" type="text" name="name" id="name">
+                        <label for="email">EMAIL</label>
+                        <input class="form__input" type="email" name="email" id="email">
                         
-                        <input class="form__tik" type="checkbox">
-                        <span>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>
-    
+                        <div class="checkbox__container">
+                            <input class="form__checkbox" type="checkbox" id="check">
+                            <span>I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</span>    
+                        </div>
+                       
                         <div class="btn--contenedor">
                             <input class="form__btn" type="submit" value="Send">
                         </div>
                     </form>
                 </div>
             </section>
+
+            <div class="scroll"><div class="percent">0%</div></div>
+
+            <div class="btn__return"><div>ReturnTop</div></div>
     </main>
     
     <footer class="footer">
