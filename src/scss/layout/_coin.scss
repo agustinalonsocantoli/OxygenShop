@@ -6,75 +6,72 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 450px;
-    height: 300px;
+    width: 90%;
+    min-height: 300px;
     margin: 20px auto 40px auto;
-    border: 1px solid black;
+    border: 1px solid v.$blue;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 28px;
+    padding: 15px 10px;
 
-    .coin__select {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 400px;
-
-        select {
-            border-radius: 20px;
-            padding: 10px;
-            background: v.$green;
-            border: none;
-            font-family: v.$open-sans;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 18px;
-            color: v.$black;
-        }
+    @include m.desktop {
+        width: 40%;
+        min-height: 250px;
     }
 
-    .coin__input {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 400px;
-        gap: 10px;
-
-        input {
-            width: 50%;
-            height: 30px;
-            padding: 5px;
-            border: none;
-            border-bottom: 2px solid v.$black;
-        }
-
-        label {
-            font-family: v.$open-sans;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 18px;
-            color: v.$black;
-        }
+    @include m.desktopXL {
+        width: 30%;
     }
 
-    button {
-        width: 50%;
-        height: 50px;
-        background: v.$btn;
-        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-        border-radius: 35px;
+    p {
+        font-family: v.$open-sans;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    select {
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: v.$blue;
         border: none;
         font-family: v.$open-sans;
-        font-weight: 700;
-        font-size: 13px;
+        font-weight: 400;
+        font-size: 15px;
         line-height: 18px;
         color: v.$white;
     }
 
-    span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid red;
-        width: 50%;
-        height: 50px;
+    .coin__result {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        border: 5px double v.$black;
+        width: 80%;
+
+        .result {
+            padding: 5px 0px 15px 0px;
+
+            &:last-child {
+                border-left: 5px double v.$black;
+            }
+
+            h4{
+                margin-bottom: 15px;
+                padding-bottom: 2px;
+                border-bottom: 1px solid v.$black;
+                font-family: v.$raleway;
+                font-weight: 700;
+                font-size: 15px;
+            }
+
+            span {
+                font-family: v.$open-sans;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                color: v.$black;
+            }
+        }
     }
 }
