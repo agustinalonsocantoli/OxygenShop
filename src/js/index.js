@@ -247,7 +247,6 @@ window.addEventListener('scroll',() => {
 
     if(scrollPercent > 25) {
         popup.style.display = sessionStorage.getItem('popup');
-        console.log('scroooolllll');
     } 
 })
 
