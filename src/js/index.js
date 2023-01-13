@@ -24,41 +24,16 @@ window.addEventListener('load', () => {
 
     // PORCENTAJE SCROLL
     let percent = document.querySelector('.percent');
+    let scrollPercent = 0;
 
     window.addEventListener('scroll',() => {
         //Calcular el porcentaje que el usuario ha scrolleado y mostrarlo
         let scrollTop = document.documentElement['scrollTop'] || document.body['scrollTop'];
         let scrollBottom = (document.documentElement['scrollHeight'] || document.body['scrollHeight']) - document.documentElement.clientHeight;
-        let scrollPercent = parseFloat((scrollTop / scrollBottom * 100).toFixed(0));
+        scrollPercent = parseFloat((scrollTop / scrollBottom * 100).toFixed(0));
 
         percent.innerHTML = `${scrollPercent}%`;
-
-        // if(scrollPercent > 25) {
-        //     popup.style.display = 'block';
-        // }
     });
-
-    //POPUP "SUBSCRIBE TO OUR NEWSLETTER"
-    // let popup = document.querySelector('.popup');
-    // let cerrarPopup = document.querySelector('.popup__icon');
-
-    // setTimeout(function() {
-    //     popup.style.display = 'block';
-    // }, 5000)
-
-    // document.querySelector('main').addEventListener('click', () => {
-    //     popup.style.display = 'none';
-    // })
-
-    // cerrarPopup.addEventListener('click', () => {
-    //     popup.style.display = 'none';
-    // })
-
-    // document.addEventListener('keydown', function(event) {
-    //     if(event.key == 'Escape') {
-    //         popup.style.display = 'none';
-    //     }
-    // });
 
     // BOTON RETURN TO THE TOP
     let returnTop = document.querySelector('.btn__return');
@@ -257,4 +232,41 @@ window.addEventListener('load', () => {
         .catch((error) => console.log(error));
     });
 
+    // POPUP "SUBSCRIBE TO OUR NEWSLETTER"
+    let popup = document.querySelector('.popup');
+    let cerrarPopup = document.querySelector('.popup__icon');
+
+    if (typeof(Storage) !== "undefined") {
+        sessionStorage.setItem('popup', 'block')
+    } else {
+        console.log('Error LocalStoge');
+    }
+    setTimeout(function() {
+        popup.style.display = sessionStorage.getItem('popup');
+    }, 5000)
+
+    window.addEventListener('scroll',() => {
+
+        if(scrollPercent > 25) {
+            popup.style.display = sessionStorage.getItem('popup');
+            console.log('scroooolllll');
+        } 
+    })
+
+    document.querySelector('main').addEventListener('click', () => {
+        popup.style.display = 'none';
+        sessionStorage.removeItem('popup');
+    })
+
+    cerrarPopup.addEventListener('click', () => {
+        popup.style.display = 'none';
+        sessionStorage.removeItem('popup');
+    })
+
+    document.addEventListener('keydown', function(event) {
+        if(event.key == 'Escape') {
+            popup.style.display = 'none';
+            sessionStorage.removeItem('popup');
+        }
+    });
  });

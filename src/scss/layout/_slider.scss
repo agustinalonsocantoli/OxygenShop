@@ -15,17 +15,17 @@
     }
 
     @include m.desktop {
-        height: 600px;
+        min-height: 600px;
     }
 
     .slider__container {
         display: flex;
-        height: 300px;
+        min-height: 300px;
         transform: translate(0);
         transition: transform 0.6s ease;
 
         @include m.desktop {
-            height: 600px;
+            min-height: 600px;
         }
 
         img {
