@@ -8,6 +8,8 @@
 
 Pagina Web realizada en training Oxygen como proyecto final para los modulos de HTML, CSS/SASS y JavaScript, en el mismo se desarrollo la maquetacion de un shop y se le dio funcionalidad con JavaScript( Slider, Conversor de monedas ApiRest, Popup subcribe, validacion de formulacion, envios de datos a APIrest, Indicador porcentaje de Scroll).
 
+<h4>Para ingresar a la web pulse<a href="https://oxygenshop-aac.netlify.app">Aqui</a>.</h4>
+
 ## Tecnologías 🛠️
 
 - HTML
