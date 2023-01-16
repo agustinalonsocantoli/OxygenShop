@@ -180,20 +180,18 @@ new Slider('#slider');
 // CONVERTIDOR DE MONEDA
 let amounts = document.querySelectorAll('.prices__text p');
 let input = document.querySelector('.coin__select');
-let prof = document.querySelector('.result_prof');
-let prem = document.querySelector('.result_prem');
+let prof = document.querySelector('.price__pro');
+let prem = document.querySelector('.price__pre');
+let basic = document.querySelector('.price__basic');
 let selectInput = 'eur';
 let prices = new Array();
 
 for(let i = 0; i < amounts.length; i++){
-    let price = amounts[i].outerText.replace('$', '');
+    let price = amounts[i].outerText.replace('€', '');
 
     if(price != 0 && price > 0){
         prices.push(price);
     }
-
-    prof.innerHTML = `$ ${prices[0]}`;
-    prem.innerHTML = `$ ${prices[1]}`;
 }
 
 input.addEventListener('change', () => {
@@ -213,17 +211,20 @@ input.addEventListener('change', () => {
             let gbpProf = prices[0] / gbp;
             let gbpPrem = prices[1] / gbp;
 
+            basic.innerHTML = `£ 0`;
             prof.innerHTML = `£ ${gbpProf.toFixed(2)}`;
             prem.innerHTML = `£ ${gbpPrem.toFixed(2)}`;
         } else if (selectInput ==='usd') {
             let usdProf = prices[0] / usd;
             let usdPrem = prices[1] / usd;
 
+            basic.innerHTML = `USD 0`;
             prof.innerHTML = `USD ${usdProf.toFixed(2)}`;
             prem.innerHTML = `USD ${usdPrem.toFixed(2)}`;
         } else if (selectInput ==='eur') {
-            prof.innerHTML = `$ ${prices[0]}`;
-            prem.innerHTML = `$ ${prices[1]}`;
+            basic.innerHTML = `€ 0`;
+            prof.innerHTML = `€ ${prices[0]}`;
+            prem.innerHTML = `€ ${prices[1]}`;
         }
 
     })

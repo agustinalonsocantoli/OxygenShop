@@ -735,9 +735,8 @@ li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
-  min-height: 300px;
-  margin: 20px auto 40px auto;
+  width: 80%;
+  margin: 0px auto 30px auto;
   border: 1px solid #08A6E4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 28px;
@@ -745,13 +744,12 @@ li {
 }
 @media (min-width: 1000px) {
   .coin {
-    width: 40%;
-    min-height: 250px;
+    width: 30%;
   }
 }
 @media (min-width: 1900px) {
   .coin {
-    width: 30%;
+    width: 20%;
   }
 }
 .coin p {
@@ -770,34 +768,6 @@ li {
   font-size: 15px;
   line-height: 18px;
   color: #FFFFFF;
-}
-.coin .coin__result {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  border: 5px double #000000;
-  width: 80%;
-}
-.coin .coin__result .result {
-  padding: 5px 0px 15px 0px;
-}
-.coin .coin__result .result:last-child {
-  border-left: 5px double #000000;
-}
-.coin .coin__result .result h4 {
-  margin-bottom: 15px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #000000;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-}
-.coin .coin__result .result span {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 20px;
-  color: #000000;
 }
 
 #slider {

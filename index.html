@@ -167,11 +167,33 @@
         <section class="prices" id="prices">
             <h2>Pricing</h2>
 
+            <div class="coin">
+                <p>EURO</p>
+    
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-exchange" width="25" height="25" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="5" cy="18" r="2" />
+                        <circle cx="19" cy="6" r="2" />
+                        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
+                        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3" />
+                    </svg>
+                </div>
+    
+                <select class="coin__select">
+                    <option selected="true" disabled>Seleccione Moneda</option>
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                </select>
+                
+            </div>
+
             <div class="prices__container">
                 <div class="prices__basic">
                     <div class="prices__text">
                         <h4>Basic</h4>
-                        <p>$0</p>
+                        <p class="price__basic">€ 0</p>
                     </div>
     
                     <ul>
@@ -222,7 +244,7 @@
                 <div class="prices__prof">
                     <div class="prices__text">
                         <h4>Professional</h4>
-                        <p>$25</p>
+                        <p class="price__pro">€ 25</p>
                         <span>Limited offer</span>
                     </div>
     
@@ -274,7 +296,7 @@
                 <div class="prices__premium">
                     <div class="prices__text">
                         <h4>Premium</h4>
-                        <p>$60</p>
+                        <p class="price__pre">€ 60</p>
                         <span>Limited offer</span>
                     </div>
     
@@ -321,52 +343,6 @@
                     <button>Begin</button>
                 </div>
             </section>
-
-            <div class="coin">
-                <p>EURO</p>
-
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-exchange" width="25" height="25" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <circle cx="5" cy="18" r="2" />
-                        <circle cx="19" cy="6" r="2" />
-                        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
-                        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3" />
-                    </svg>
-                </div>
-
-                <select class="coin__select">
-                    <option selected="true" disabled>Seleccione Moneda</option>
-                    <option value="eur">EUR</option>
-                    <option value="usd">USD</option>
-                    <option value="gbp">GBP</option>
-                </select>
-
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-exchange" width="25" height="25" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <circle cx="5" cy="18" r="2" />
-                        <circle cx="19" cy="6" r="2" />
-                        <path d="M19 8v5a5 5 0 0 1 -5 5h-3l3 -3m0 6l-3 -3" />
-                        <path d="M5 16v-5a5 5 0 0 1 5 -5h3l-3 -3m0 6l3 -3" />
-                    </svg>
-                </div>
-
-                <div class="coin__result">
-                    
-                    <div class="result">
-                        <h4>Professional</h4>
-                        <span class="result_prof"></span>
-                    </div>
-
-                    <div class="result">
-                        <h4>Premium</h4>
-                        <span class="result_prem"></span>
-                    </div>
-                
-                </div>
-                
-            </div>
 
             <div id="slider">
                 <div class="slider__container">
