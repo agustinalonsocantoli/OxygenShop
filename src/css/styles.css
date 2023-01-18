@@ -827,8 +827,8 @@ li {
 #slider {
   display: flex;
   flex-direction: column;
-  width: 95%;
-  margin: 100px auto 50px auto;
+  max-width: 1000px;
+  margin: 100px auto 0px auto;
   overflow: hidden;
   position: relative;
 }
@@ -837,24 +837,14 @@ li {
     max-width: 1400px;
   }
 }
-@media (min-width: 1000px) {
-  #slider {
-    min-height: 600px;
-  }
-}
 #slider .slider__container {
   display: flex;
-  min-height: 300px;
   transform: translate(0);
   transition: transform 0.6s ease;
 }
-@media (min-width: 1000px) {
-  #slider .slider__container {
-    min-height: 600px;
-  }
-}
 #slider .slider__container img {
   width: 100%;
+  height: 400px;
 }
 #slider .prev, #slider .next {
   width: 30px;
