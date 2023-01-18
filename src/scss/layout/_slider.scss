@@ -5,10 +5,9 @@
     display: flex;
     flex-direction: column;
     width: 95%;
-    margin: 0 auto;
+    margin: 100px auto 50px auto;
     overflow: hidden;
     position: relative;
-    margin-bottom: 50px;
 
     @include m.desktopXL {
         max-width: 1400px;
@@ -41,8 +40,7 @@
         top: 50%;
         position: absolute;
         cursor: pointer;
-        background: rgb(255 255 255 / 40%);
-        border: 1px solid #000000;
+        background: rgb(255 255 255 / 50%);
         border-radius: 100%;
         transition: all .3s ease;
     }
@@ -50,14 +48,14 @@
     .prev {
         left: 20px;
         &:hover {
-            left: 10px;
+            background: rgb(255 255 255 / 100%);
         }
     }
 
     .next {
         right: 20px;
         &:hover {
-            right: 10px;
+            background: rgb(255 255 255 / 100%);
         }
     }
 

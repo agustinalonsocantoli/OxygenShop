@@ -21,7 +21,7 @@ cerrar.addEventListener('click', () => {
 });
 
 // PORCENTAJE SCROLL
-let percent = document.querySelector('.percent');
+let scrollBar = document.querySelector('.scroll');
 let scrollPercent = 0;
 
 window.addEventListener('scroll',() => {
@@ -30,12 +30,23 @@ window.addEventListener('scroll',() => {
     let scrollBottom = (document.documentElement['scrollHeight'] || document.body['scrollHeight']) - document.documentElement.clientHeight;
     scrollPercent = parseFloat((scrollTop / scrollBottom * 100).toFixed(0));
 
-    percent.innerHTML = `${scrollPercent}%`;
+    console.log(scrollPercent);
+    scrollBar.style.width = `${scrollPercent}%`;
+
 });
+
 
 // BOTON RETURN TO THE TOP
 let returnTop = document.querySelector('.btn__return');
 
+window.addEventListener('scroll',() => {
+
+    if(scrollPercent > 15) {
+        returnTop.style.display = 'flex'
+    } else {
+        returnTop.style.display = 'none'
+    }
+})
 
 returnTop.addEventListener('click', () => {
     setTimeout(function() {
@@ -134,6 +145,8 @@ class Slider {
 
         this.setEventListeners();
         this.generateDots();
+
+        this.prevBtn.style.display = 'none';
     };
 
     setEventListeners(){
@@ -141,7 +154,10 @@ class Slider {
             if(this.countSlide != this.slidesImg.length - 1){
                 this.countSlide = this.countSlide >= this.slidesImg -1 ? 0 : this.countSlide + 1;
                 this.sliderContainer.style.transform = `translateX(-${this.countSlide * this.slideSize}px)`;
-            };
+                this.prevBtn.style.display = 'flex';
+            } if(this.countSlide == this.slidesImg.length - 1) {
+                this.nextBtn.style.display = 'none';
+            }
         });
     
         this.prevBtn.addEventListener('click', () => {
@@ -149,7 +165,10 @@ class Slider {
             if(this.countSlide != 0){
                 this.countSlide = this.countSlide <= 0 ? this.slidesImg - 1 : this.countSlide - 1;
                 this.sliderContainer.style.transform = `translateX(-${this.countSlide * this.slideSize}px)`;
-            };
+                this.nextBtn.style.display = 'flex';
+            } if(this.countSlide == 0) {
+                this.prevBtn.style.display = 'none';
+            }
         });
     };
 
@@ -234,36 +253,33 @@ input.addEventListener('change', () => {
 // POPUP "SUBSCRIBE TO OUR NEWSLETTER"
 let popup = document.querySelector('.popup');
 let cerrarPopup = document.querySelector('.popup__icon');
-
-if (typeof(Storage) !== "undefined") {
-    sessionStorage.setItem('popup', 'block')
-} else {
-    console.log('Error LocalStoge');
-}
-setTimeout(function() {
-    popup.style.display = sessionStorage.getItem('popup');
+ 
+let timeOut = setTimeout(function() {
+    if (!sessionStorage.getItem('popup')) {
+        sessionStorage.setItem('popup', true)
+        popup.style.display = 'block';
+    }
 }, 5000)
 
 window.addEventListener('scroll',() => {
 
-    if(scrollPercent > 25) {
-        popup.style.display = sessionStorage.getItem('popup');
+    if(scrollPercent > 25 && !sessionStorage.getItem('popup')) {
+        sessionStorage.setItem('popup', true)
+        popup.style.display = 'block';
+        clearTimeout(timeOut);
     } 
 })
 
 document.querySelector('main').addEventListener('click', () => {
     popup.style.display = 'none';
-    sessionStorage.removeItem('popup');
 })
 
 cerrarPopup.addEventListener('click', () => {
     popup.style.display = 'none';
-    sessionStorage.removeItem('popup');
 })
 
 document.addEventListener('keydown', function(event) {
     if(event.key == 'Escape') {
         popup.style.display = 'none';
-        sessionStorage.removeItem('popup');
     }
 });
