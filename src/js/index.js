@@ -30,7 +30,6 @@ window.addEventListener('scroll',() => {
     let scrollBottom = (document.documentElement['scrollHeight'] || document.body['scrollHeight']) - document.documentElement.clientHeight;
     scrollPercent = parseFloat((scrollTop / scrollBottom * 100).toFixed(0));
 
-    console.log(scrollPercent);
     scrollBar.style.width = `${scrollPercent}%`;
 
 });
@@ -147,6 +146,7 @@ class Slider {
         this.generateDots();
 
         this.prevBtn.style.display = 'none';
+        console.log(this.slideSize);
     };
 
     setEventListeners(){
