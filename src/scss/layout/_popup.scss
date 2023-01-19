@@ -5,23 +5,14 @@
     display: none;
     position: fixed;
     z-index: 1;
-    top: 18%;
-    left: 7%;
     width: 350px;
     background: v.$green;
     border-radius: 10px;
     text-align: center;
-
-    @include m.desktop {
-        top: 22%;
-        left: 38%;
-    }
-
-    @include m.desktopXL {
-        top: 9%;
-        left: 39%;
-        width: 650px;
-    }
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: auto;
 
     .popup__icon{
         display: flex;

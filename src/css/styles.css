@@ -52,6 +52,11 @@ li {
     align-items: center;
   }
 }
+@media (min-width: 1024px) and (max-width: 1124px) {
+  .navegacion {
+    padding-left: 25px;
+  }
+}
 .navegacion .navegacion__lista {
   display: none;
 }
@@ -240,25 +245,14 @@ li {
   display: none;
   position: fixed;
   z-index: 1;
-  top: 18%;
-  left: 7%;
   width: 350px;
   background: #55DFB4;
   border-radius: 10px;
   text-align: center;
-}
-@media (min-width: 1000px) {
-  .popup {
-    top: 22%;
-    left: 38%;
-  }
-}
-@media (min-width: 1950px) {
-  .popup {
-    top: 9%;
-    left: 39%;
-    width: 650px;
-  }
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin: auto;
 }
 .popup .popup__icon {
   display: flex;

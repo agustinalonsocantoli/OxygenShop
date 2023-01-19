@@ -28,6 +28,10 @@
         align-items: center;
     }
 
+    @include m.desktopM {
+        padding-left: 25px;
+    }
+
     .navegacion__lista{
         display: none;
         
