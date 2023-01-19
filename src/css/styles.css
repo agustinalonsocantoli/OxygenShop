@@ -253,7 +253,7 @@ li {
     left: 38%;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .popup {
     top: 9%;
     left: 39%;
@@ -322,13 +322,13 @@ li {
   .benefits {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 105px 150px;
+    padding: 100px 8%;
     gap: 40px;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .benefits {
-    padding: 105px 500px;
+    padding: 100px 15%;
   }
 }
 .benefits h3 {
@@ -347,7 +347,7 @@ li {
     line-height: 42px;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .benefits h3 {
     width: 300px;
   }
@@ -369,7 +369,7 @@ li {
 }
 .benefits .benefits__mac {
   background: #FFFFFF;
-  padding: 22px;
+  padding: 5%;
   margin: 0px auto 24px auto;
 }
 @media (min-width: 1000px) {
@@ -396,6 +396,16 @@ li {
   .benefits .benefits__mac img {
     width: 386.44px;
     height: 219px;
+  }
+}
+@media (min-width: 1000px) {
+  .benefits .benefits__mac .mac--container {
+    width: 80%;
+  }
+}
+@media (min-width: 1950px) {
+  .benefits .benefits__mac .mac--container {
+    width: 40%;
   }
 }
 .benefits .benefits__mac .mac--container .mac--efect {
@@ -438,7 +448,7 @@ li {
     margin-top: 70px;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .benefits .benefits__mac .mac--text {
     width: 600px;
   }
@@ -504,12 +514,6 @@ li {
     grid-row: 3/4;
     width: 100%;
     margin: 0px auto;
-    min-width: 623px;
-  }
-}
-@media (min-width: 1900px) {
-  .benefits .benefits__trumpet {
-    min-width: 1300px;
   }
 }
 @media (min-width: 1000px) {
@@ -537,7 +541,7 @@ li {
     margin: 100px 98px;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .benefits .trumpet--container img {
     margin: 100px 220px;
   }
@@ -552,7 +556,7 @@ li {
     min-height: 370px;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .benefits .trumpet--container {
     min-width: 250px;
   }
@@ -589,7 +593,7 @@ li {
     justify-content: space-around;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .prices .prices__container {
     padding: 0px 300px;
   }
@@ -801,7 +805,7 @@ li {
     width: 30%;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .coin {
     width: 20%;
   }
@@ -832,7 +836,7 @@ li {
   overflow: hidden;
   position: relative;
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   #slider {
     max-width: 1400px;
   }
@@ -1070,7 +1074,7 @@ li {
     bottom: 7%;
   }
 }
-@media (min-width: 1900px) {
+@media (min-width: 1950px) {
   .btn__return {
     margin-right: 5px;
     font-size: 15px;

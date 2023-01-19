@@ -17,7 +17,8 @@
 }
 
 @mixin desktopXL {
-    @media (min-width: 1900px) {
+    @media (min-width: 1950px) {
         @content;
     }
 }
+
