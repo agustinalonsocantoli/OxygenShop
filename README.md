@@ -6,8 +6,9 @@
 
 ## Descripcion 📖
 
-Pagina Web realizada en training Oxygen como proyecto final para los modulos de HTML, CSS/SASS y JavaScript, en el mismo se desarrollo la maquetacion de un shop y se le dio funcionalidad con JavaScript( Slider, Conversor de monedas ApiRest, Popup subcribe, validacion de formulacion, envios de datos a APIrest, Indicador porcentaje de Scroll).
-
+Pagina Web realizada en training Oxygen como proyecto final para los modulos de HTML, CSS/SASS y JavaScript, en el mismo se desarrollo la maquetacion de un
+shop y se le dio funcionalidad con JavaScript( Slider, Conversor de monedas ApiRest, Popup subcribe, validacion de formulacion, envios de datos a APIrest,
+Indicador porcentaje de Scroll).
 <h4>Para ingresar a la web pulse<a href="https://oxygenshop-aac.netlify.app">Aqui</a>.</h4>
 
 ## Tecnologías 🛠️
@@ -25,6 +26,7 @@ Si desea hacer una contribución, siga los siguientes pasos:
 4. Push a la rama de trabajo (`git push origin feature/ContFeature`)
 5. Abra un Pull Request
 
+
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢 
@@ -32,9 +34,7 @@ Si desea hacer una contribución, siga los siguientes pasos:
 * Ayudanos con cualquier sugerencia en los contactos mencionados 📢
 
 ## Autor ✒️
-
 ⌨️ [AgustinAlonsoCantoli](https://github.com/agustinalonsocantoli) 😊
-
 <h4 align="left">Conecta conmigo:</h4>
 <p align="left">
 <a href="https://linkedin.com/in/agustinalonsocantoli" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="agustinalonsocantoli" height="30" width="40" /></a>
