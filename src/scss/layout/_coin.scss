@@ -1,0 +1,42 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.coin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto 50px auto;
+    border: 1px solid v.$blue;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 28px;
+    padding: 15px 10px;
+
+    @include m.desktop {
+        width: 30%;
+    }
+
+    @include m.desktopXL {
+        width: 20%;
+    }
+
+    p {
+        font-family: v.$open-sans;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    select {
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: v.$blue;
+        border: none;
+        font-family: v.$open-sans;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: v.$white;
+    }
+}

@@ -19,8 +19,15 @@
     }
 
     .prices__container {
+        padding: 0 5%;
+
+        @include m.tablet {
+            padding: 0 20%;
+        }
+
         @include m.desktop {
             display: flex;
+            justify-content: space-around;
         }
         
         @include m.desktopXL {
@@ -59,7 +66,7 @@
             color: v.$white;
             border: none;
             width: 150px;
-            height: 50px;
+            padding: 15px;
             border-radius: 23px;
         }
     
@@ -71,26 +78,43 @@
         }
     
         .prices__basic {
-            box-sizing: border-box;
-            width: 293px;
-            height: 251px;
+            min-height: 250px;
             border-radius: 18px;
-            margin: 17px auto 50px auto;
             border: 1px solid v.$pink;
+            position: relative;
+            padding: 0px 7%;
+            margin-bottom: 50px;
+
+            &:hover {
+                transform: scale(1.08);
+                box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+                transition: transform 0.25s linear;
+            }
 
             @include m.desktop {
-                width: 372px;
-                height: 461px;
-                margin-top: 20px;
-                margin-right: 10px;
+                margin-bottom: 0px;
+                min-height: 460px;
+
+                &:hover {
+                    transform: scale(1.08);
+                    box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+                    transition: transform 0.25s linear;
+                }
             }
     
             button {
                 background: v.$pink;
-                margin-top: 2px;
+                position: absolute;
+                bottom: -10%;
+                left: 30%;
 
                 @include m.desktop {
-                    margin-top: 60px;
+                    transform: translate(-50%, -25px);
+                    left: 47%;
+                }
+
+                @include m.tablet {
+                    left: 35%;
                 }
             }
     
@@ -100,25 +124,44 @@
         }
     
         .prices__prof {
-            box-sizing: border-box;
-            width: 339px;
-            height: 277px;
+            min-height: 251px;
             border-radius: 18px;
-            margin: 0px auto 50px auto;  
             border: 1px solid v.$blue;
-            box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+            position: relative;
+            padding: 0px 7%;
+            margin-bottom: 50px;
+            
+
+            &:hover {
+                transform: scale(1.08);
+                box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+                transition: transform 0.25s linear;
+            }
 
             @include m.desktop {
-                width: 405px;
-                height: 500px;
+                margin-bottom: 0px;
+                min-height: 461px;
+
+                &:hover {
+                    transform: scale(1.08);
+                    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+                    transition: transform 0.25s linear;
+                }
             }
     
             button {
                 background: v.$blue;
-                margin-top: 25px;
+                position: absolute;
+                bottom: -10%;
+                right: 30%;
 
                 @include m.desktop {
-                    margin-top: 80px;
+                    transform: translate(-50%, -25px);
+                    left: 50%;
+                }
+
+                @include m.tablet {
+                    right: 35%;
                 }
             }
     
@@ -128,26 +171,41 @@
         }
     
         .prices__premium {
-            box-sizing: border-box;
-            width: 293px;
-            height: 251px;
+            min-height: 251px;
             border-radius: 18px;
-            margin: 0px auto 80px auto;
             border: 1px solid v.$green;
+            position: relative;
+            padding: 0px 7%;
+            margin-bottom: 50px;
+
+            &:hover {
+                transform: scale(1.08);
+                box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+                transition: transform 0.25s linear;
+            }
 
             @include m.desktop {
-                width: 372px;
-                height: 461px;
-                margin-top: 20px;
-                margin-left: 10px;
+                margin-bottom: 0px;
+                min-height: 461px;
+
+                &:hover {
+                    transform: scale(1.08);
+                    box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+                    transition: transform 0.25s linear;
+                }
             }
     
             button {
                 background: v.$green;
-                margin-top: 5px;
+                transform: translate(-50%, -25px);
+                position: absolute;
+                bottom: -20%;
+                left: 50%;
+
 
                 @include m.desktop {
-                    margin-top: 40px;
+                    transform: translate(-50%, -25px);
+                    bottom: -10%;
                 }
             }
     

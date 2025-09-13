@@ -4,7 +4,6 @@
 
 <h4 align="center">🔭 Les presento "OXYGEN Shop"</h4>
 
-
 ## Descripcion 📖
 
 Pagina Web realizada en training Oxygen como proyecto final para los modulos de HTML, CSS/SASS y JavaScript, en el mismo se desarrollo la maquetacion de un
@@ -17,7 +16,6 @@ Indicador porcentaje de Scroll).
 - HTML
 - CSS/SASS
 - JAVASCRIPT
-
 
 ## Contribuyendo
 
@@ -34,6 +32,7 @@ Si desea hacer una contribución, siga los siguientes pasos:
 * Comenta a otros sobre este proyecto 📢 
 * Da las gracias públicamente 🤓.
 * Ayudanos con cualquier sugerencia en los contactos mencionados 📢
+
 ## Autor ✒️
 ⌨️ [AgustinAlonsoCantoli](https://github.com/agustinalonsocantoli) 😊
 <h4 align="left">Conecta conmigo:</h4>

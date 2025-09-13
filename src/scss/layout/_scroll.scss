@@ -1,0 +1,56 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.scroll {
+    height: 8px;
+    position: fixed;
+    top: 71px;
+    z-index: 10;
+
+    background: rgb(85,223,180);
+    background: -moz-linear-gradient(270deg, rgba(85,223,180,0.9584427521008403) 19%, rgba(8,166,228,0.9780505952380952) 64%);
+    background: -webkit-linear-gradient(270deg, rgba(85,223,180,0.9584427521008403) 19%, rgba(8,166,228,0.9780505952380952) 64%);
+    background: linear-gradient(270deg, rgba(85,223,180,0.9584427521008403) 19%, rgba(8,166,228,0.9780505952380952) 64%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#55dfb4",endColorstr="#08a6e4",GradientType=1);
+
+}
+
+.btn__return {
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    background: transparent;
+    position: fixed;
+    right: 0;
+    bottom: 12%;
+    margin-right: 5px;
+    padding: 5px;
+    color: v.$green;
+    font-family: v.$raleway;
+    font-weight: 400;
+    font-size: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.7);
+
+    @include m.desktop {
+        margin-right: 5px;
+        font-size: 15px;
+        bottom: 7%;
+    }
+
+    @include m.desktopXL {
+        margin-right: 5px;
+        font-size: 15px;
+        bottom: 5%;
+    }
+
+    @include m.tablet {
+        margin-right: 5px;
+        bottom: 8%;
+    }
+
+}

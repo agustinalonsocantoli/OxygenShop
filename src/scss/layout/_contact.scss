@@ -73,28 +73,31 @@
         }
     }
 
-    .form__tik {
-        display: inline;
-        margin-top: 35px;
-        margin-right: 5px;
-        vertical-align: top;
-        width: 20px;
-        height: 20px;
-    }
-
-    span {
-        font-family: v.$open-sans;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: #707070;
-        display: inline-block; 
+    .checkbox__container {
         margin-top: 30px;
-        width: 90%;
 
-        @include m.desktop {
-            width: 405px;
-            height: 108px;
+        .form__checkbox {
+            display: inline;
+            margin-right: 5px;
+            vertical-align: top;
+            margin-top: 5px;
+            width: 20px;
+            height: 20px;
+        }
+    
+        span {
+            font-family: v.$open-sans;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #707070;
+            display: inline-block; 
+            width: 90%;
+    
+            @include m.desktop {
+                width: 405px;
+                height: 108px;
+            }
         }
     }
 
@@ -125,11 +128,10 @@
         }
     }
 
-    .form {
+    .form__contact {
         @include m.desktop {
             margin:110px auto 0px 55px;
         }
     }
 
-    
 }
